@@ -21,16 +21,22 @@ social formats (1:1, 4:5, 9:16, 16:9).
     pasted into Saved opens the piece again.
 - **Right panel.**
   - Motion: Still, Pulse, Wave or Roll, with tempo, intensity and offset.
-  - Material: frame/block patterns, and single or double line.
-  - Colour: the brand palette with tints, tones and shades.
-  - Layout: 1–3 lines.
+  - Material: frame/block patterns, elastic or natural letters, and single or double
+    line.
+  - Color: the four brand primaries with tints, tones and shades; the tints, tones
+    and shades are a draft proposal awaiting client review.
+  - Layout: 1–3 lines, Fit/Fill, scale, position, height and wall.
+  - Caption: an optional line under the mark.
 - **Download as.** PNG gives a still. MP4 is H.264 at 30 fps with a duration you choose;
   "Match loop length" makes it loop cleanly. The shortcuts are **E** for PNG and **V**
   for MP4.
-- **Brand book.** Click the logo to download the brand book (draft for review).
+- **Brand book.** Clicking the header logo opens the brand book download option; it does
+  not download the PDF immediately. The PDF downloads only from that panel's
+  **Download PDF** button. The brand book is a draft awaiting client review.
 
 Full typographic rules (per-sign height ranges, fixed safe area, motion) are in
-[`lab/README.md`](lab/README.md) (Spanish).
+[`lab/README.md`](lab/README.md), which also covers the interface, exports and
+deployment in detail.
 
 ## Development
 
@@ -60,10 +66,10 @@ npx wrangler pages deploy dist --project-name=livelive --branch=main --commit-di
 
 ## Known limitations
 
-- **Glyphs:** the digits 2, 3, 4 and 5, K, `?` and accented letters are not yet rebuilt
-  with the same stroke logic as S, A, C, G, J and Y.
-- **Draft material:** the brand book is a draft for review. Its tints, tones and shades
-  are a proposal.
+- **Glyphs:** the digits 2–5, K, `?` and accented letters are not yet rebuilt with the
+  same stroke logic as S, A, C, G, J and Y.
+- **Draft material:** the brand book and the proposed tints, tones and shades are drafts
+  awaiting client review.
 - **Reference typeface:** the web licence for Akzidenz-Grotesk Condensed is not
   confirmed. The Lab draws its own constructed letters and does not use the typeface.
 - **Browsers:**
@@ -74,18 +80,19 @@ npx wrangler pages deploy dist --project-name=livelive --branch=main --commit-di
 - **Logo motion:** with the fixed safe area, the header logo moves less than the
   larger pieces do.
 
-## License status
+## Licensing status
 
-- **Code** (`lab/index.html`, `lab/brandbook/index.html`, `scripts/`): no open-source
-  licence has been granted. All rights are reserved by the author until the licence is
-  decided; the code is public for reference only.
-- **Brand material:** the LIVELIVE name, logo, colour palette and brand book belong to
-  their owner and are **not licensed** for reuse.
+- **Code** (`lab/index.html`, `lab/brandbook/index.html`, `scripts/`): the source is
+  publicly visible, but no open-source licence has been granted. All rights are reserved
+  until a licence is decided, and there is no `LICENSE` file.
+- **Brand assets:** the LIVELIVE name, logo, colour palette and brand book belong to
+  their owner and are **not licensed for reuse**.
 - **Third-party material:**
   - [mp4-muxer](https://github.com/Vanilagy/mp4-muxer) 5.2.1 © 2023 Vanilagy, MIT. Its
     licence is in `lab/vendor/mp4-muxer.LICENSE`.
   - [Oswald](https://fonts.google.com/specimen/Oswald) and
     [Inter](https://fonts.google.com/specimen/Inter) are SIL Open Font License 1.1. They
     are loaded from Google Fonts, not bundled; the brand book PDF embeds subsets of them.
-- **Not included:** Akzidenz-Grotesk Condensed (Berthold) is a licensed typeface and
-  is not part of this repository.
+- **Not included:** the Akzidenz-Grotesk Condensed (Berthold) `.pfb` used as a local
+  visual reference is neither included in this repository nor distributed on the site.
+  The Lab draws its own constructed letters.
