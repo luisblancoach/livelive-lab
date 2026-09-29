@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LIVELIVE — Brand book (draft for review)</title>
+<!-- Source of brandbook/livelive-brand-book-DRAFT.pdf. Every example is drawn by the Lab's own engine
+     (../index.html), so the book always matches the instrument. Regenerate with scripts/brandbook.sh. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page{size:297mm 210mm; margin:0}
+  :root{--ch:#40424F; --mute:#62646F; --hair:#DCDDE2; --blue:#027AB4; --green:#349F7E; --yellow:#E1BC3A; --red:#C7435E}
+  *{box-sizing:border-box}
+  html,body{margin:0; background:#fff; color:var(--ch); font-family:'Inter',sans-serif}
+  .page{width:297mm; height:210mm; padding:14mm 16mm 12mm; position:relative; page-break-after:always; overflow:hidden}
+  .page:last-child{page-break-after:auto}
+  .hd{display:flex; justify-content:space-between; align-items:baseline; font:500 8pt 'Oswald',sans-serif; letter-spacing:.22em; text-transform:uppercase; color:var(--mute); border-bottom:1px solid var(--ch); padding-bottom:3mm; margin-bottom:7mm}
+  .hd b{color:var(--ch); font-weight:600}
+  .draft{color:#812C3D; background:#F5DDE2; padding:1mm 2mm; letter-spacing:.16em}
+  h1{font:700 30pt 'Oswald',sans-serif; letter-spacing:.08em; text-transform:uppercase; margin:0 0 4mm}
+  h2{font:600 17pt 'Oswald',sans-serif; letter-spacing:.1em; text-transform:uppercase; margin:0 0 5mm}
+  h3{font:600 9pt 'Oswald',sans-serif; letter-spacing:.2em; text-transform:uppercase; margin:0 0 2.5mm}
+  p,li{font-size:9.5pt; line-height:1.5; margin:0 0 2.5mm}
+  ul{padding-left:4.5mm; margin:0}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10mm}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:8mm}
+  .fig{display:flex; gap:6mm; align-items:flex-end; flex-wrap:wrap}
+  .fig figure{margin:0}
+  figcaption{font:500 7.5pt 'Oswald',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--mute); margin-top:2mm}
+  canvas{display:block}
+  table{border-collapse:collapse; font-size:8.5pt; width:100%}
+  td,th{border-bottom:1px solid var(--hair); padding:1.4mm 2mm; text-align:left}
+  th{font:600 7.5pt 'Oswald',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--mute)}
+  .sw{display:grid; grid-template-columns:28mm repeat(4,1fr); gap:1.6mm; align-items:stretch; margin-bottom:1.6mm}
+  .sw div{height:15mm; padding:1.5mm; font:500 7pt 'Oswald',sans-serif; letter-spacing:.08em; display:flex; align-items:flex-end}
+  .sw .lb{height:auto; align-items:center; color:var(--ch); font-size:8pt; letter-spacing:.18em; text-transform:uppercase}
+  .foot{position:absolute; left:16mm; right:16mm; bottom:8mm; display:flex; justify-content:space-between; font:500 7pt 'Oswald',sans-serif; letter-spacing:.2em; text-transform:uppercase; color:var(--mute)}
+  .no{color:#812C3D; font-weight:600}
+</style>
+</head>
+<body>
+<iframe id="lab" src="../index.html" style="position:fixed;width:10px;height:10px;left:-99px;top:0;border:0;visibility:hidden"></iframe>
+
+<section class="page" id="p1">
+  <div class="hd"><b>LIVELIVE</b><span class="draft">Draft for review · v0.1</span></div>
+  <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:14mm; align-items:center; height:150mm">
+    <div id="cover"></div>
+    <div>
+      <h1>Brand book</h1>
+      <p style="font-size:12pt">LIVELIVE is an entertainment and eSports medium. Its identity is a typographic reel: four columns, two lines, boxes that change height while the letters keep their construction.</p>
+      <p>This draft documents the mark, its grid, the fixed safe area, the palette, the height rules and examples of use. Every figure is drawn by LIVELIVE Lab, the instrument that generates the pieces.</p>
+      <p style="color:var(--mute)">Status: working draft generated on <span id="date"></span>. Brand content needs approval. The reference typeface (Akzidenz-Grotesk Condensed) has no confirmed web licence; the Lab draws its own constructed letters.</p>
+    </div>
+  </div>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>01</span></div>
+</section>
+
+<section class="page" id="p2">
+  <div class="hd"><b>01 · The mark</b><span class="draft">Draft</span></div>
+  <h2>Four columns, two lines</h2>
+  <div class="grid2">
+    <div>
+      <p>The mark is LIVE written twice, one line above the other, in four columns. Each column has one brand colour; each box is either a <b>frame</b> (coloured line, white interior, coloured letter) or a <b>block</b> (solid colour, white letter).</p>
+      <p>The dividing line of every column is the position of a reel. At rest it sits in the middle; in motion it moves, and the boxes change height. The letters never scale: they are built again at every height.</p>
+      <ul><li>Colour order: blue · green · yellow · red.</li><li>Frame over block is the reference state; inverted, checker, all frames and all blocks are allowed variants.</li><li>Single line: neighbouring frames share one line. Double line: every frame keeps its four borders.</li></ul>
+    </div>
+    <div class="fig" id="marks"></div>
+  </div>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>02</span></div>
+</section>
+
+<section class="page" id="p3">
+  <div class="hd"><b>02 · Grid and safe area</b><span class="draft">Draft</span></div>
+  <h2>One module: the column width u</h2>
+  <div class="grid2">
+    <div>
+      <table>
+        <tr><th>Measure</th><th>Value</th><th>At u = 178 px</th></tr>
+        <tr><td>Column width</td><td>u</td><td>178</td></tr>
+        <tr><td>Line weight</td><td>0.09 u</td><td>16</td></tr>
+        <tr><td>Letter stem (vertical stroke)</td><td>0.124 u</td><td>22</td></tr>
+        <tr><td>Letter arm (horizontal stroke)</td><td>0.112 u</td><td>20</td></tr>
+        <tr><td>Diagonal stroke (perpendicular)</td><td>0.118 u</td><td>21</td></tr>
+        <tr><td>Natural cap height</td><td>0.79 u</td><td>140</td></tr>
+        <tr><td><b>Safe area, top and bottom</b></td><td><b>0.20 u — fixed</b></td><td><b>36</b></td></tr>
+        <tr><td>Side margin</td><td>0.08 u</td><td>14</td></tr>
+      </table>
+      <p style="margin-top:5mm"><b>Safe area rule.</b> Inside every box (a frame's white interior or a whole block) the sign keeps an empty band of 0.20 u above and below it. The measure is the same for every sign, every box and every frame of the animation. The sign lives only between the bands and never touches them.</p>
+    </div>
+    <div class="fig" id="safe"></div>
+  </div>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>03</span></div>
+</section>
+
+<section class="page" id="p4">
+  <div class="hd"><b>03 · Height rules</b><span class="draft">Draft</span></div>
+  <h2>Letters grow in their own segments</h2>
+  <div class="grid2">
+    <div>
+      <p>A sign is never scaled or distorted as a whole. Width and stroke are fixed by the column; only specific segments lengthen: straight stems, the counters between arms, the straight parts of bowls, and the diagonals (whose perpendicular stroke stays constant).</p>
+      <p>Each sign has a height range in which it keeps its construction. Motion and layout always leave every box enough room for its sign; a short canvas makes the mark narrower, never the letters smaller.</p>
+      <table id="ranges"></table>
+    </div>
+    <div class="fig" id="heights"></div>
+  </div>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>04</span></div>
+</section>
+
+<section class="page" id="p5">
+  <div class="hd"><b>04 · Lines</b><span class="draft">Draft</span></div>
+  <h2>One, two or three lines</h2>
+  <p>Two lines is the reference lockup. One line keeps the boxes still and lets the letters breathe inside them; three lines repeat the reel with an extra box per column. The rules of the letters and the safe area do not change.</p>
+  <div class="fig" id="lines" style="margin-top:5mm"></div>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>05</span></div>
+</section>
+
+<section class="page" id="p6">
+  <div class="hd"><b>05 · Palette</b><span class="draft">Draft · tints, tones and shades are a proposal</span></div>
+  <h2>Four primaries, with tints, tones and shades</h2>
+  <div class="grid2">
+    <div id="palette"></div>
+    <div>
+      <p>The artwork uses the four primaries on white, paper, charcoal or ink. Tints (with white), tones (with grey) and shades (with black) organise the interface and secondary material; the tints are also offered as backgrounds.</p>
+      <ul><li>Never place blocks on a background of their own colour: they disappear.</li><li>No magenta, no gradients, no transparency.</li><li>Charcoal #40424F for text and lines; white for frame interiors.</li></ul>
+      <div class="fig" id="palcomp" style="margin-top:5mm"></div>
+    </div>
+  </div>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>06</span></div>
+</section>
+
+<section class="page" id="p7">
+  <div class="hd"><b>06 · Examples of use</b><span class="draft">Draft</span></div>
+  <h2>Formats for social media</h2>
+  <div class="fig" id="formats"></div>
+  <p style="margin-top:5mm">Export from LIVELIVE Lab: PNG at the exact size of the format, or MP4 (H.264, 30 fps, 1–30 s). Pieces can be saved, copied as a code and opened again exactly.</p>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>07</span></div>
+</section>
+
+<section class="page" id="p8">
+  <div class="hd"><b>07 · Do and don't</b><span class="draft">Draft</span></div>
+  <h2>Keep the construction</h2>
+  <div class="grid3">
+    <div><h3>Do</h3><ul><li>Keep the four columns and their order.</li><li>Change box heights, colours by column, lines and formats with the Lab.</li><li>Keep the safe area free.</li><li>Use frames with white interiors.</li></ul></div>
+    <div><h3 class="no">Don't</h3><ul><li>Stretch, squash or rescale letters.</li><li>Put blocks on a background of the same colour.</li><li>Add effects, gradients or transparency.</li><li>Replace the constructed letters with another typeface.</li></ul></div>
+    <div><h3>Pending</h3><ul><li>Approval of this draft.</li><li>Web licence for Akzidenz-Grotesk Condensed (weight to confirm against the original slides).</li><li>Final version of digits and punctuation.</li></ul></div>
+  </div>
+  <div class="foot"><span>LIVELIVE · brand book</span><span>08</span></div>
+</section>
+
+<script>
+const f=document.getElementById('lab');
+const ready=()=>new Promise(r=>{const go=()=>{try{if(f.contentWindow.eval('typeof render==="function"&&typeof defaults==="function"'))return r(f.contentWindow)}catch(e){} setTimeout(go,80)}; go();});
+document.getElementById('date').textContent=new Date().toISOString().slice(0,10);
+(async()=>{
+  const w=await ready(); await document.fonts.ready;
+  const st=o=>Object.assign(w.eval('defaults()'),{motor:'quieto'},o);
+  const fig=(el,cv,cap)=>{const fg=document.createElement('figure'); fg.append(cv); if(cap){const c=document.createElement('figcaption'); c.textContent=cap; fg.append(c);} document.getElementById(el).append(fg);};
+  const piece=(W,H,s,t=0)=>{const c=document.createElement('canvas'), d=3; c.width=W*d; c.height=H*d; c.style.width=W+'px'; c.style.height=H+'px'; const g=c.getContext('2d'); g.setTransform(d,0,0,d,0,0); w.render(g,W,H,t,s); return c;};
+  const mark=(W,H,s,pos,text='LIVE',guides=false)=>{const c=document.createElement('canvas'), d=3; c.width=W*d; c.height=H*d; c.style.width=W+'px'; c.style.height=H+'px'; const g=c.getContext('2d'); g.setTransform(d,0,0,d,0,0); g.fillStyle='#fff'; g.fillRect(0,0,W,H); const P=text.length===1?{rows:[[text]],cols:1}:w.parseText(text); pos=(pos||[]).concat(Array(P.cols).fill(0.5)).slice(0,P.cols); if(guides) w.eval('GUIDES=true'); try{ w.drawMark(g,0,0,W,H,pos,P,s,'mark'); } finally { w.eval('GUIDES=false'); } return c;};
+
+  fig('cover',mark(420,420,st({})),'');
+  fig('marks',mark(190,190,st({})),'Frame / block · single line');
+  fig('marks',mark(190,190,st({linea:'doble'})),'Double line');
+  fig('marks',mark(190,190,st({estados:'invertido'}),[.62,.36,.5,.7]),'Inverted · moving line');
+  fig('marks',mark(190,190,st({color:'mono',mono:3,estados:'damero'})),'Mono · checker');
+
+  fig('safe',mark(250,250,st({}),[.42,.6,.5,.36],'LIVE',true),'Hatched bands: always 0.20 u');
+  fig('safe',mark(125,250,st({letra:'natural'}),[.3,.55],'SG',true),'Natural height, centred');
+
+  const R=w.eval('RANGE'), D=w.eval('RANGE_DEFAULT');
+  const rows=[['Most signs',D],...Object.entries(R).filter(([k])=>/[A-Z0-9]/.test(k)).map(([k,v])=>[k,v])];
+  const cells=rows.map(([k,v])=>`<td><b>${k}</b></td><td>${v[0]}–${v[1]} u</td>`); let html='<tr><th>Sign</th><th>Range</th><th>Sign</th><th>Range</th><th>Sign</th><th>Range</th></tr>';
+  for(let i=0;i<cells.length;i+=3) html+='<tr>'+cells.slice(i,i+3).join('')+'</tr>';
+  document.getElementById('ranges').innerHTML=html;
+  for(const [ch,hu] of [['S',0.6],['S',1.4],['S',3.2],['A',0.72],['A',1.4],['A',3.2]]){
+    const u=46, lw=Math.max(2,2*Math.round(u*0.09/2)), cell=Math.round(hu*u+0.4*u+2*lw+2);
+    fig('heights',mark(u,cell*2,st({color:'mono',mono:ch==='S'?0:3}),[0.5],ch,true),`${ch} · ${hu} u`);
+  }
+
+  for(const [l,t] of [[1,0.6],[2,0],[3,0.4]]) fig('lines',piece(260,260,st({lineas:l,vocab:l===3?'LIVE LIVE LIVE':'LIVE',motor:'onda',intensity:0.6}),t),`${l} ${l===1?'line':'lines'}`);
+
+  const HUES=w.eval('HUES'), NAMES=w.eval('HUE_NAMES'), T=w.eval('TINT'), O=w.eval('TONE'), SH=w.eval('SHADE');
+  const pal=document.getElementById('palette');
+  HUES.forEach((h,i)=>{ const row=document.createElement('div'); row.className='sw';
+    row.innerHTML=`<div class="lb">${NAMES[i]}</div>`+[[h,'Primary'],[T(h),'Tint'],[O(h),'Tone'],[SH(h),'Shade']].map(([c,n])=>`<div style="background:${c};color:${n==='Tint'?'#40424F':'#fff'}">${n}<br>${c}</div>`).join('');
+    pal.append(row); });
+  const neu=document.createElement('div'); neu.className='sw';
+  neu.innerHTML=`<div class="lb">Neutrals</div>`+[['#FFFFFF','White','#40424F'],['#FCF5F2','Paper','#40424F'],['#40424F','Charcoal','#fff'],['#1B1D24','Ink','#fff']].map(([c,n,tc])=>`<div style="background:${c};color:${tc};outline:1px solid #DCDDE2">${n}<br>${c}</div>`).join('');
+  pal.append(neu);
+  fig('palcomp',piece(170,170,st({fondo:'t0'})),'Blue tint background (proposal)');
+  fig('palcomp',piece(170,170,st({fondo:'t2',estados:'invertido'})),'Yellow tint (proposal)');
+
+  for(const [fmt,W,H,o] of [['1:1',200,200,{}],['4:5',180,225,{vocab:'LIVE TONIGHT',lineas:2}],['9:16',135,240,{fondo:'carbon',estados:'invertido'}],['16:9',320,180,{lineas:1,vocab:'GAME'}]])
+    fig('formats',piece(W,H,st(Object.assign({format:fmt},o)),0.4),fmt);
+
+  document.body.dataset.ready='1';
+})();
+</script>
+</body>
+</html>

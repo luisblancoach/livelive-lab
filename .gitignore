@@ -1,0 +1,14 @@
+# Licensed font material — local comparison only, never commit or publish
+lab/public/
+lab/local-fonts/
+*.pfb
+*.woff
+*.woff2
+# Review material and brand references (captures, videos, slides)
+lab/verify/
+references/
+# Build output and local Cloudflare state (account ids, caches)
+dist/
+.wrangler/
+# System
+.DS_Store
